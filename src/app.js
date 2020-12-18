@@ -6,7 +6,8 @@ const cors = require("cors");
 const teachersController = require("./controllers/teachersController");
 const subjectsController = require("./controllers/subjectsController");
 const examsController = require("./controllers/examsController");
-const periodController = require("./controllers/periodController");
+const periodsController = require("./controllers/periodsController");
+const categoriesController = require("./controllers/categoriesController");
 
 const app = express();
 
@@ -23,7 +24,10 @@ app.use("/api/disciplinas", subjectsController);
 app.use("/api/provas", examsController);
 
 // Define Routes of period
-app.use("/api/periodos", periodController);
+app.use("/api/periodos", periodsController);
+
+// Define Routes of category
+app.use("/api/categorias", categoriesController);
 
 
 module.exports = app;
